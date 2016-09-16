@@ -11,6 +11,7 @@ del /F /S /Q /A .git
 git push -f
 npm install rimraf -g
 rimraf node_modules
+git reset @~
 ```
 
 ##Trianing onic : https://docs.google.com/document/d/13C1-N1KzUHzoSRVoBE39lyC5Q5CbevqRjvv9ZcQ9lfs/edit?usp=sharing
