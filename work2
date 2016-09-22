@@ -1,0 +1,9 @@
+http://jsfiddle.net/p20qds16/
+
+var datatable = $('#table').dataTable().api();
+
+$.get('myUrl', function(newDataArray) {
+    datatable.clear();
+    datatable.rows.add(newDataArray);
+    datatable.draw();
+});
