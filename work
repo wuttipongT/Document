@@ -38,4 +38,19 @@ pwd : WSFC
 
 chut
 if
-P'ป๋อก  / เมจิ
+P'ป๋อก  /p' เมจิ
+
+FTTPSYNC
+		"host": "129.3.16.31",
+		"username": "webmaster",  // or null for anonymous login
+		"password": "passwd",
+		"path": "/var/www/html/SFC",
+
+		"upload_on_save": true, // set *false* if you do not want to upload on save!
+
+		// "port": 21,
+		// "tls": false,
+		// "timeout": 30, // [seconds]
+
+		// "passive": true,
+		"download_on_open": true,
