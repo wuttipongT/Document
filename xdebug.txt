@@ -1,0 +1,29 @@
+package
+php-debug
+https://atom.io/packages/php-debug
+https://codeforgeek.com/2014/09/5-must-have-packages-atom-editor/
+dll
+https://xdebug.org/wizard.php
+
+config.scon
+"linter-php":
+  executablePath: "C:/MAMP/bin/php/php5.6.0/php"
+"php-debug":
+  PathMaps: [
+    "remotepath;localpath"
+    "./src;F:\\GitHub\\php-example\\src"
+  ]
+  ServerPort: 9000
+welcome:
+  showOnStartup: false
+php.ini
+  [Xdebug]
+  zend_extension = C:\MAMP\bin\php\php5.6.0\ext\php_xdebug.dll
+  xdebug.remote_enable=1
+  xdebug.remote_host=127.0.0.1:8000
+  xdebug.remote_connect_back=1
+  xdebug.remote_port=9000
+  xdebug.remote_handler=dbgp
+  xdebug.remote_mode=req
+  xdebug.remote_autostart=true
+  xdebug.idekey=xdebug.atom
