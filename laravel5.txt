@@ -1,0 +1,47 @@
+﻿https://laracasts.com/series/laravel-5-fundamentals/episodes/2
+packagist.org
+~$ laravel new my-blog
+
+root directorty project
+~$ php -S localhost:8888 -t public
+
+A Gentile Introduction to Routein, Controllers, and View
+~$ homestead ssh
+~$ serve laravel5.dev /home/Vagrant/Code/learning-laravel-5/public
+
+
+Controler, Route live in folder Http
+View live in folder resources
+
+cofig file
+.env.example (rename .env)
+
+laravel commnad
+php artisan
+ex php artisan make:controller PageController
+option
+--plain
+hint php artisan help make:controller
+
+Passing Data to Views (send value to view)
+view('view')->with('name','bed'); || ["name"->"value",...] || view('view', data) compact
+hint receive {{$name}} or <?=$name ?> if html {{ !! $name !!}}
+
+Blade 101 (template html)
+app.blade.php root views
+@yield('content')
+@extends('app')
+@section('content')
+@stop
+hint @if(...) ... \r\n@else ... \r\n@endif
+@unless if !
+@foreach
+@foreelse
+ex @foreach( .. as ..)\r\n@endforeach 
+@if(count(..))\r\n@endif
+
+Migrations
+php artisan migrate
+vocabolary
+blade
+laravel5.dev

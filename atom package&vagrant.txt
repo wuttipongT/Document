@@ -1,0 +1,7 @@
+https://github.com/faceair/atom-goto-definition
+https://atom.io/packages/atom-autocomplete-php
+https://www.sitepoint.com/10-essential-atom-add-ons/
+
+http://java.paykin.info/install-oracle-database-vagrant-puppet/
+http://alloverwebs.com/oracle-php-with-wampserver/
+

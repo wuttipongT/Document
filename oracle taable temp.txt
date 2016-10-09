@@ -1,0 +1,25 @@
+create global temporary table mytemp (a date)
+  on commit delete rows -- Delete rows after commit
+/
+
+Show Status of the temporary table
+
+select table_name, temporary, duration
+  from user_tables
+ where table_name = 'MYTEMP
+/
+
+Rows exists after insert
+
+insert into mytemp values (sysdate);
+select * from mytemp;
+
+Inserted rows are missing after commit
+
+commit;
+select * from mytemp;
+
+http://www.akadia.com/services/ora_important_part_2.html
+https://www.tutorialspoint.com/plsql/index.htm
+
+http://joseoncode.com/2011/09/26/a-walkthrough-jquery-deferred-and-promise/
