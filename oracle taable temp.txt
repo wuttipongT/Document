@@ -23,3 +23,5 @@ http://www.akadia.com/services/ora_important_part_2.html
 https://www.tutorialspoint.com/plsql/index.htm
 
 http://joseoncode.com/2011/09/26/a-walkthrough-jquery-deferred-and-promise/
+
+$('tbody tr:eq('+ index +')').find('input[type="checkbox"]').click();//trigger('click');
