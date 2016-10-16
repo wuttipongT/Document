@@ -1,0 +1,42 @@
+﻿
+8 Eloquent 101
+
+php artisan make:model Article
+php artisan tinker
+
+$article = new App\Article;
+$article->title = "string";
+$article->body = "";
+$article->published_at = Carbon::now();
+
+$article->toArray();
+
+$article->save(); r bool
+
+sqlite3 stroage/database.sqlite
+select * from ...
+
+
+App\Article::all()->toArray();
+$article->toArray();
+
+$article = App\Article::find(1); r bool
+$article->toArray();
+$article->where('body','')->get(); r Collection
+$article->where('body','')->first();
+$article = App\Article::create(['title'=>'', 'body':'', published_at'=>Carbon::now()]);
+(Error MessAssignmentException)
+
+Edit Solution
+class Article file
+protected $filable = [
+'title',
+'body',
+'published_At'
+];
+
+find
+toArray();
+$article->update(['body'=>'']);
+
+

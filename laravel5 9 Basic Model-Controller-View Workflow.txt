@@ -1,0 +1,62 @@
+﻿9 Basic Model/Controller/View Workflow 
+
+Article class
+
+Rount File
+
+Route::get('foo', function()
+{
+return 'bBar';
+});
+
+Route::get('articles', 'ArticleController@index');
+Route::get('articles/{id}', 'ArticleController@show');
+
+php artisan make:controller ArticlesController --plan
+
+
+use App/Articel;
+ArticlesController class
+
+public function index()
+{
+//return 'get all article';
+
+$articles = \App\Article::all();
+//return $article; //json
+
+//return view('article.index', compact('articles'));
+return view('article.index')->with('articles', $articles);;
+}
+public function show($id)
+{
+//return $id;
+//$article = Article::find($id);
+$article = Article::findOrFail($id);
+//dd($article);
+//return $artcle;
+//if(is_null($article))
+//if(!$article)
+//{
+abort(404);
+//config/app
+//}
+return view('artices.show', compact('article'));
+}
+
+View article file
+articles folder
+index.blade.php 
+@extends('app');
+$section('content');
+<h1>article</h1>
+$foreach ($articles as $article)
+#code here...
+{{$article->body}}
+$endforeach
+
+//href {{action('ArticlesController@show',[$article->id])}} || {{url('/articles', $article->id)}}
+$stop
+
+new file show.blade.php
+
