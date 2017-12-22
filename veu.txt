@@ -1,0 +1,53 @@
+style
+.is-loading{…}
+body
+div id=root
+Input type=“text” v-model=“message”
+p the value of input is : {{ message }}
+
+ul
+li v-for=“name in names” v-text=“name”
+
+input id=“input” v-model=“newName”
+!--button v-on:click=“addName” v-bind:title=“title”
+button #click=“addName” :title=“title” :class=“{‘is-loading’: isLoading}”
+script
+var app = new Vue({
+el: ‘#root’,
+data: {
+message: Hello World,
+newName:’’,
+names: [‘’,’’,’’,’’,..],
+title:’666’,
+isLoading: false
+},
+
+method: {
+addName() {
+this.names.push(this.newName)
+this.newName = ‘’
+},
+toggleClass(){
+this.isLoading = true
+}
+},
+
+computed: {
+reversedMessage(){
+Return this.message.spite(‘’).reverse().join(‘’);
+}
+}
+/*
+mounted(){
+
+document.querySelector(‘#button’).addEventListener(‘click’, () => {
+let name = document.querySelector(‘#name’)
+app.names.push(name.value)
+name.value = ‘’
+*/
+})
+
+}
+})
+
+
